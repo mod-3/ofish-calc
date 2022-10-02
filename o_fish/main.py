@@ -1,7 +1,13 @@
 import math
+from datetime import date
+from datetime import datetime
 
+d0 = date(2022, 8, 27)
+d1 = date(datetime.now().year, datetime.now().month, datetime.now().day)
+delta = d1 - d0
+print(delta.days)
 
-today_is_day = 20
+today_is_day = delta.days
 
 def on_start():
     print("1. Totals")
