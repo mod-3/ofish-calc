@@ -43,7 +43,7 @@ def show_totals():
     print("Days left at 60k pace: ", days_left_at_sixty_rate)
     print("Days left at 70k pace: ", days_left_at_seventy_rate)
     print("Days left at 80k pace: ", days_left_at_eighty_rate)
-    # print("Days left at... 90k pace: ", days_left_at_ninety_rate)
+    print("Days left at... 90k pace: ", days_left_at_ninety_rate)
     # print("Days left at... 100k pace: ", days_left_at_not_happening_rate)
     print("Days I would have been left at original rate: ", days_at_original_rate)
     days_ahead = math.ceil(days_at_original_rate - days_left_at_current_rate)
