@@ -4,25 +4,33 @@ from dash import html
 import plotly.express as px
 import pandas as pd
 
-app = dash.Dash()
+from flask import Flask
 
-df = pd.read_csv(
-    "https://raw.githubusercontent.com/ThuwarakeshM/geting-started-with-plottly-dash/main/life_expectancy.csv"
-)
+app =Flask(__name__)
 
-fig = px.scatter(
-    df,
-    x="GDP",
-    y="Life expectancy",
-    size="Population",
-    color="continent",
-    hover_name="Country",
-    log_x=True,
-    size_max=60,
-)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
 
-app.layout = html.Div([dcc.Graph(id="life-exp-vs-gdp", figure=fig)])
+# app = dash.Dash()
+
+# df = pd.read_csv(
+#     "https://raw.githubusercontent.com/ThuwarakeshM/geting-started-with-plottly-dash/main/life_expectancy.csv"
+# )
+
+# fig = px.scatter(
+#     df,
+#     x="GDP",
+#     y="Life expectancy",
+#     size="Population",
+#     color="continent",
+#     hover_name="Country",
+#     log_x=True,
+#     size_max=60,
+# )
+
+# app.layout = html.Div([dcc.Graph(id="life-exp-vs-gdp", figure=fig)])
 
 
-if __name__ == "__main__":
-    app.run_server(debug=True)
+# if __name__ == "__main__":
+#     app.run_server(debug=True)
