@@ -55,7 +55,7 @@ def show_totals():
 def show_pacing_stats():
     goal = 2000000
     days_at_fifty = goal/50000
-    print("Total days at ")
+    print("Total days at ", days_at_fifty)
 
 
 if __name__ == "__main__":
