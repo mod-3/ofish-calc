@@ -2,12 +2,13 @@ import math
 from datetime import date
 from datetime import datetime
 
-d0 = date(2022, 8, 27)
-d1 = date(datetime.now().year, datetime.now().month, datetime.now().day)
-delta = d1 - d0
-print(delta.days)
+def get_current_day():
+    d0 = date(2022, 8, 27)
+    d1 = date(datetime.now().year, datetime.now().month, datetime.now().day)
+    delta = d1 - d0
+    return delta.days
 
-today_is_day = delta.days
+today_is_day = get_current_day()
 
 def on_start():
     print("1. Totals")
@@ -55,6 +56,7 @@ def show_pacing_stats():
     goal = 2000000
     days_at_fifty = goal/50000
     print("Total days at ")
+
 
 if __name__ == "__main__":
     on_start()
